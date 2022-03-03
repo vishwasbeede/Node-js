@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Embassy details</title>
+    <style>
+        .cont-align{
+    width: 100px;
+    height: fit-content;
+    flex-direction:column;
+    justify-content: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+    </style>
+</head>
+<body>
+    <div class="main" style="border-left:0px; position:fixed;left:20px;width: 23%;background-image: linear-gradient(to right, rgb(143, 21, 180) , blue);color: beige;">
+        <h3>Indian Embassy details</h3>
+        
+        <p>
+Please find below indian embassy details.
+Which is linked to respective embassy offices in there country.
+    
+        </p>
+        </div>
+    
+    <div class="main-data" style="text-shadow: 2px;background-color: thistle;">
+      
+
+    <% Object.keys(d_values[0]).forEach(function(key){ %>
+        <div id="<%= key %>" class="cont-align" style="color: cornflowerblue;width:30%;background-color: azure;">
+            <p> Name: <%= key %> </p>
+            <a style="text-decoration: none;" href="<%= d_values[0][key].link %>"><%= key %></a>
+            <p><%= d_values[0][key].desc %></p>
+        </div>
+        <br>
+           
+        <% }); %>
+    
+</div>
+
+</body>
+</html>
